@@ -1,0 +1,10 @@
+table {
+    border: 2px black solid; 
+}
+
+table tbody tr td {
+    border: 2px #555 solid; 
+    color: #555;
+    padding : 5px;
+    margin : 2px;
+}

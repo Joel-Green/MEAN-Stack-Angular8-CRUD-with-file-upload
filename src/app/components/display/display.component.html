@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor= " let obj of arr">
+            <td>{{obj.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<h1>Input</h1>
+<form>
+<label for="name">Name:</label>
+<input type="text" name="name" [(ngModel)]="name">
+<input type="button" value="Add Data" (click)="addData()">
+</form>

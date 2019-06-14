@@ -6,6 +6,7 @@ const User = require('../models/userSchema');
 
 mongoose.set('userFindAndModify', false);
 
+
 router.get('/',(req,res,next)=>{
     User.find((err,users)=>{
         err ? console.log(err) : res.json(users);
@@ -23,7 +24,7 @@ router.post('/add',(req,res,next)=>{
 
 })
 
-router.post('/delete/:id',(req,res,next)=>{
+router.get('/delete/:id',(req,res,next)=>{
     const id = req.params.id;
 
 

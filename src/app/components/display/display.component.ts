@@ -25,4 +25,14 @@ name;
       this.us.addData(this.name);
       this.arr.push({name: this.name});
   }
+
+
+  delData(id) {
+    console.log(id);
+    this.us.delData(id);
+    this.arr.filter((value, index, arr) => {
+        return value._id !== id;
+    });
+    console.log(this.arr);
+  }
 }

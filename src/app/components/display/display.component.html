@@ -4,11 +4,19 @@
             <th>
                 Name
             </th>
+            <th>
+                Delete
+            </th>
+            <th>
+                Update
+            </th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor= " let obj of arr">
             <td>{{obj.name}}</td>
+            <td><input type="button" value="Delete" (click)="delData(obj._id)"></td>
+            <td><input type="button" value="Update" (click)="upData(obj._id)"></td>
         </tr>
     </tbody>
 </table>

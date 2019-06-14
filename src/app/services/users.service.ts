@@ -8,7 +8,7 @@ export class UsersService {
     url = 'http://localhost:3000/users';
     constructor(private http: HttpClient) { }
     addData(name) {
-        const obj = {name:name};
+        const obj = {name};
         this
             .http
             .post(`${this.url}/add`, obj)
@@ -29,8 +29,8 @@ export class UsersService {
             .subscribe(res => console.log(res));
     }
     delData(id) {
-        this
+        return this
             .http
-            .get(`${this.url}/delete/${id}`);
+            .get(`${this.url}/delete/${id}`).subscribe();
     }
 }

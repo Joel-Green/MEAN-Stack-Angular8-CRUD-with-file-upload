@@ -23,7 +23,7 @@ name;
 
   addData() {
       this.us.addData(this.name);
-      this.arr.push({name: this.name});
+      this.getData();
   }
 
 
@@ -33,6 +33,12 @@ name;
     this.arr.filter((value, index, arr) => {
         return value._id !== id;
     });
+    this.getData();
     console.log(this.arr);
+  }
+
+
+  upData(id,name){
+    this.us.upData(id, name);
   }
 }

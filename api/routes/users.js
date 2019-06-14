@@ -44,21 +44,6 @@ router.get('/delete/:id',(req,res,next)=>{
 
 })
 
-router.get('/update/get/:id',(req,res,next)=>{
-    const id =req.params.id;
-
-    User.findOne({_id : id }, (err,obj)=>{
-        if(err) {
-        console.log(err)
-     } 
-     else{
-    console.log(obj);
-    res.json(obj);
-     } 
-            
-    });
-});
-
 router.post('/update/:id',(req,res,next)=>{
     const id = req.params.id;
     let UserUpdate = {

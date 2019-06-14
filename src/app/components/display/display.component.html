@@ -16,7 +16,7 @@
         <tr *ngFor= " let obj of arr">
             <td>{{obj.name}}</td>
             <td><input type="button" value="Delete" (click)="delData(obj._id)"></td>
-            <td><input type="button" value="Update" (click)="upData(obj._id)"></td>
+            <td><input type="text" [(ngModel)]="obj.name"> <input type="button" value="Update" (click)="upData(obj._id,obj.name)"></td>
         </tr>
     </tbody>
 </table>
